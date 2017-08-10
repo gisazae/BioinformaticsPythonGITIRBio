@@ -4,7 +4,8 @@
 # GITIRBio -> GITIR
 import os
 
-""" El ensamblador mira (http://mira-assembler.sourceforge.net/docs/DefinitiveGuideToMIRA.html) soporta una gran variedad de tecnologias de 
+""" From GIsaza -> Integrado ABySS parallel y BUSCO Method. 
+Ensamblador mira (http://mira-assembler.sourceforge.net/docs/DefinitiveGuideToMIRA.html) soporta una gran variedad de tecnologias de 
 secuenciamiento como electrophoresis sequencing (sanger), 454 pyro-sequencing (GS20, FLX or Titanium), Ion Torrent, Solexa (Illumina) 
 ademas soporta tanto DNA como EST/RNASeq (transcriptoma) """
 def miraAssembler(options):
