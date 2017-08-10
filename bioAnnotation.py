@@ -6,8 +6,9 @@ from gitirBio.tools import *
 import os
 import csv
 
-""" Anotacion por blast, se utiliza pipeline de terceros SFG (http://sfg.stanford.edu/index.html), las bases de datos utilizadas en formato binario (no fasta) de blast
+""" Pipeline based on SFG (http://sfg.stanford.edu/index.html), las bases de datos utilizadas en formato binario (no fasta) de blast
 son la nr (ftp://ftp.ncbi.nlm.nih.gov/blast/db/), la Swiss-Prot (http://www.uniprot.org/downloads), y la TrEMBL (http://www.uniprot.org/downloads)"""
+# From Gisaza -> Remember bioAnnotationExtended.py includes MAKER, BlastX, BlastP and Interproscan subpipeline
 def blastAnnotationSFG(options):
     if(os.path.exists("annotationResultBlast")):
         os.system("rm -fr annotationResultBlast")
