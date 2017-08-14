@@ -1,10 +1,10 @@
 #! /usr/bin/python
 
-""" script que contiene todo el proceso bioinformatico """
+""" script que contiene 2/4 Phases Pipeline el proceso bioinformatico """
 def workFlow():
     """ usuario del sistema operativo (linux), se utiliza para identificar los directorios de salida 
 	y de parametros de entrada  """
-    user="ganoderma"
+    user="fungus"
 	""" el cliente envia los parametros o opciones con las que se desea ejecutar el proceso bioinformatico, 
 	estas opciones son escritas en un archivo qeu luego es leido por el programa """
     parameter = ConfigParser.ConfigParser()
