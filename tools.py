@@ -4,9 +4,9 @@
 
 import os
     
-""" funcion que convierte ensamblaje ADN a aminoacidos, se utiliza la herramienta TransDecoder (https://transdecoder.github.io/), se recomienda cambiar la herramieta
+""" Convierte ensamblaje ADN a aminoacidos, se utiliza via TransDecoder (https://transdecoder.github.io/), se recomienda cambiar la herramieta
 ya que los cambios realizados por sus desarrolladores ya no permite la conversion como un paso individual, la recomendacion es una herramienta que permita convertir
-un archivo fasta de ADN (ensamblaje o reads) a aminoacidos y que de forma automatica escoja el marco de lectura mas apropiado 
+un archivo fasta de ADN (ensamblaje o reads) a aminoacidos y que de forma automatica seleccione el marco de lectura mas apropiado 
 (transeq (http://emboss.sourceforge.net/apps/cvs/emboss/apps/transeq.html) convierte a los 6 marcos de lectura 
 pero no permite escoger automaticamente el marco de lectura mas apropiado) """	
 def nucl2amino(nThreads,target):
