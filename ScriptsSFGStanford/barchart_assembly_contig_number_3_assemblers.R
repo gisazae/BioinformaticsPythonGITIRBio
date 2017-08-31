@@ -1,0 +1,12 @@
+#args assembly1_fasta assembly2_fasta assembly3_fasta assembler1_name assembler2_name assembler3_name output_char_name
+suppressMessages(suppressWarnings(require(Biostrings)))
+args <- commandArgs(TRUE)
+entry1 <- readDNAStringSet(args[1], format="fasta")
+entry2 <- readDNAStringSet(args[2], format="fasta")
+entry3 <- readDNAStringSet(args[3], format="fasta")
+length1 <- length(entry1)
+length2 <- length(entry2)
+length3 <- length(entry3)
+png(paste(args[7],".png",sep=""),width=6,height=6,units="in",res=1200)
+barplot(c(length1, length2, length3),names.arg=c(args[4], args[5], args[6]),ylab="Number of Contigs")
+dev.off()
