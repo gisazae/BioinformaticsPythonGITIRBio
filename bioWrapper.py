@@ -2,10 +2,10 @@
 
 """ script que contiene 2/4 Phases Pipeline el proceso bioinformatico """
 def workFlow():
-    """ usuario del sistema operativo (linux), se utiliza para identificar los directorios de salida 
+    """ usuario del sistema operativo (Linux-like), se utiliza para identificar los directorios de salida 
 	y de parametros de entrada  """
     user="fungus"
-	""" el cliente envia los parametros o opciones con las que se desea ejecutar el proceso bioinformatico, 
+	""" el cliente envia los parametros y opciones con las que se desea ejecutar el pipeline bioinformático, 
 	estas opciones son escritas en un archivo qeu luego es leido por el programa """
     parameter = ConfigParser.ConfigParser()
     parameter.read("gitirBio.parameter")
@@ -20,7 +20,7 @@ def workFlow():
 "RAWSEQ_FORMAT":parameter.get('PARAMETER', 'RAWSEQ_FORMAT'), "PROCESS_ID":parameter.get('PARAMETER', 'PROCESS_ID'),\
 "TECH":parameter.get('PARAMETER', 'TECH'), "ASSEMBLY_TYPE":parameter.get('PARAMETER', 'ASSEMBLY_TYPE'),\
 "LINUX_USER":user}
-	""" se llama la funcion para ensamblar por medio del ensamblador mira con las opciones definidas por el usuario,
+	""" se llama la funcion para ensamblar por medio del ensamblador MIRA con las opciones definidas por el usuario,
 	las funciones de ensamblaje estan definidas en el script gitirBio/bioAssembly.py """
         miraAssembler(options)
 		""" se llama la funcion para generar graficas estadisticas, las funciones de generacion de graficas para ensamblaje
