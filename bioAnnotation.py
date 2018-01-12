@@ -6,7 +6,7 @@ from gitirBio.tools import *
 import os
 import csv
 
-""" Pipeline based on SFG (http://sfg.stanford.edu/index.html), las bases de datos utilizadas en formato binario (no fasta) de blast
+""" Pipeline based on SFG (http://sfg.stanford.edu/index.html), las DB formato binario (no fasta) de blast
 son la nr (ftp://ftp.ncbi.nlm.nih.gov/blast/db/), la Swiss-Prot (http://www.uniprot.org/downloads), y la TrEMBL (http://www.uniprot.org/downloads)"""
 # From Gisaza -> Remember bioAnnotationExtended.py includes MAKER, BlastX, BlastP and Interproscan subpipeline
 def blastAnnotationSFG(options):
@@ -39,7 +39,7 @@ annotationResultBlast/UniProt_flatfiles annotationResultBlast/"+options["QUERY_A
     os.system("cat annotationResultBlast/"+options["QUERY_ANNOTATION"]+".sfgannotation | \
 grep -v No_evalue > "+options["QUERY_ANNOTATION"]+".sfgannotation_hits")
 
-""" Anotacion por hmm utilizando hmmer(http://hmmer.org/) , las bases de datos utilizadas son Pfam-A.hmm (ftp://ftp.ebi.ac.uk/pub/databases/Pfam/releases/) 
+""" Anotacion por Machine Learning- Hidden Markov Models hmm, las bases de datos utilizadas son Pfam-A.hmm (ftp://ftp.ebi.ac.uk/pub/databases/Pfam/releases/) 
 y tigrfam.hmm (ftp://ftp.jcvi.org/pub/data/TIGRFAMs/) """
 def hmmscanAnnotation(options):
 	""" definicion paths de las bases de datos """
