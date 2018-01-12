@@ -5,7 +5,7 @@
 import os
 
 """ From GIsaza -> Integrado ABySS parallel y BUSCO Method. 
-Ensamblador mira (http://mira-assembler.sourceforge.net/docs/DefinitiveGuideToMIRA.html) soporta una gran variedad de tecnologias de 
+With  Mira Assembly (http://mira-assembler.sourceforge.net/docs/DefinitiveGuideToMIRA.html) soporta una gran variedad de tecnologias de 
 secuenciamiento como electrophoresis sequencing (sanger), 454 pyro-sequencing (GS20, FLX or Titanium), Ion Torrent, Solexa (Illumina) 
 ademas soporta tanto DNA como EST/RNASeq (transcriptoma) """
 def miraAssembler(options):
@@ -39,7 +39,7 @@ options["PROCESS_ID"]+".fastq")
 		""" Se cambia el directorio de trabajo al original """
         os.chdir(workDir)
 
-""" Funcion para generar graficas estadisticas a partir de la salida del ensamblaje de mira, los scripts que generan las graficas 
+""" Funcion para generar graficas estadisticas a partir de la salida del ensamblaje, los scripts que generan las png 
 estan escritos en python y R """
 def assemblyStatistics(options):
     if(options["MIRA"]=="TRUE"):
